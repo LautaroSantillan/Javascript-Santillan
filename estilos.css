@@ -1,3 +1,8 @@
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -17,8 +22,118 @@
 .header {
   grid-area: "header";
   width: 100%;
-  height: 200px;
-  background-color: chartreuse;
+  background-color: white;
+}
+
+nav {
+  height: 100px;
+  line-height: 50px;
+  text-transform: uppercase;
+  font-family: "Roboto Cn", sans-serif;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr auto;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0;
+  grid-auto-flow: row;
+  grid-template-areas: "logo" "nav--visible" "nav--registro" "carrito";
+}
+nav h1 a {
+  text-decoration: none;
+}
+
+.logo {
+  background-color: #666666;
+  display: flex;
+}
+
+.nav--visible {
+  background-color: #e4405f;
+}
+
+.nav--registro {
+  background-color: aqua;
+}
+
+.carrito {
+  background-color: blueviolet;
+}
+
+.icono {
+  height: 50px;
+  transform: translateY(-100rem);
+  animation: slideIn 1s forwards;
+}
+
+.nombre {
+  font-size: 1.653rem;
+  font-weight: bold;
+  text-align: center;
+  transform: translateY(-100rem);
+  animation: slideIn 1s forwards;
+}
+.nombre a {
+  color: black;
+}
+
+.navbar {
+  display: flex;
+}
+.navbar li {
+  list-style: none;
+  transform: translateX(100rem);
+  animation: slideIn 0.5s forwards;
+}
+.navbar li:nth-child(1) {
+  animation-delay: 0s;
+}
+.navbar li:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.navbar li:nth-child(3) {
+  animation-delay: 1s;
+}
+.navbar li:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.navbar li:nth-child(5) {
+  animation-delay: 2s;
+}
+
+.navbar a {
+  padding: 1rem 0;
+  margin: 0 3rem;
+  position: relative;
+  letter-spacing: 0.125rem;
+  text-decoration: none;
+}
+.navbar a:hover {
+  text-decoration: none;
+  color: black;
+}
+.navbar a:hover::before, .navbar a:hover::after {
+  transform: scaleX(1);
+}
+.navbar a:last-child {
+  margin-right: 0;
+}
+.navbar a::before, .navbar a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.031rem;
+  background-color: #3b5999;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.5s;
+}
+.navbar a::before {
+  top: 0;
+  transform-origin: left;
+}
+.navbar a::after {
+  bottom: 0;
+  transform-origin: right;
 }
 
 .main {
