@@ -26,8 +26,9 @@
 }
 
 nav {
-  height: 100px;
-  line-height: 50px;
+  padding-top: 1.25rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
   text-transform: uppercase;
   font-family: "Roboto Cn", sans-serif;
   display: grid;
@@ -43,20 +44,26 @@ nav h1 a {
 }
 
 .logo {
+  grid-area: "logo";
   background-color: #666666;
   display: flex;
 }
 
 .nav--visible {
+  grid-area: "nav--visible";
   background-color: #e4405f;
 }
 
 .nav--registro {
+  grid-area: "nav--registro";
   background-color: aqua;
 }
 
 .carrito {
+  grid-area: "carrito";
   background-color: blueviolet;
+  font-size: 30px;
+  padding: 10px;
 }
 
 .icono {
@@ -67,8 +74,7 @@ nav h1 a {
 
 .nombre {
   font-size: 1.653rem;
-  font-weight: bold;
-  text-align: center;
+  line-height: 50px;
   transform: translateY(-100rem);
   animation: slideIn 1s forwards;
 }
@@ -78,6 +84,7 @@ nav h1 a {
 
 .navbar {
   display: flex;
+  line-height: 50px;
 }
 .navbar li {
   list-style: none;
