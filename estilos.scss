@@ -75,22 +75,22 @@ $font2: 'Courier New', Courier, monospace;
         }
     }
     &::before, &::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 0.031rem;
-    background-color: $color4;
-    left: 0;
-    transform: scaleX(0);
-    transition: all .5s;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0.031rem;
+        background-color: $color4;
+        left: 0;
+        transform: scaleX(0);
+        transition: all .5s;
     }
     &::before{
-    top: 0;
-    transform-origin: left;
+        top: 0;
+        transform-origin: left;
     }
     &::after {
-    bottom: 0;
-    transform-origin: left;
+        bottom: 0;
+        transform-origin: left;
     }
 }
 
@@ -113,9 +113,9 @@ $font2: 'Courier New', Courier, monospace;
 .nav--visible{
     display: flex;
     li{
-    list-style: none;
-    transform: translateX(-100rem);
-    animation: slideIn .5s forwards;
+        list-style: none;
+        transform: translateX(-100rem);
+        animation: slideIn .5s forwards;
         &:nth-child(1){animation-delay: 0s;}
         &:nth-child(2){animation-delay: .5s;}
         &:nth-child(3){animation-delay: 1s;}
@@ -126,9 +126,9 @@ $font2: 'Courier New', Courier, monospace;
 .nav--registro{
     display: flex;
     li{
-    list-style: none;
-    transform: translateX(100rem);
-    animation: slideIn .5s forwards;
+        list-style: none;
+        transform: translateX(100rem);
+        animation: slideIn .5s forwards;
         &:nth-child(1){animation-delay: 0s;}
         &:nth-child(2){animation-delay: .5s;}
         &:nth-child(3){animation-delay: 1s;}
@@ -141,30 +141,28 @@ $font2: 'Courier New', Courier, monospace;
     position: relative;
     letter-spacing: 0.125rem;
     &:hover{
-    font-weight: bold;
-    color: $color4;
-    transition: all .5s;
-        &::before, &::after{
-        transform: scaleX(1);
-        }
+        font-weight: bold;
+        color: $color4;
+        transition: all .5s;
+        &::before, &::after{transform: scaleX(1);}
     }
     &::before, &::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 0.031rem;
-    background-color: $color4;
-    left: 0;
-    transform: scaleX(0);
-    transition: all .5s;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0.031rem;
+        background-color: $color4;
+        left: 0;
+        transform: scaleX(0);
+        transition: all .5s;
     }
     &::before{
-    top: 0;
-    transform-origin: left;
+        top: 0;
+        transform-origin: left;
     }
     &::after {
-    bottom: 0;
-    transform-origin: right;
+        bottom: 0;
+        transform-origin: right;
     }
 }
 
@@ -180,6 +178,58 @@ $font2: 'Courier New', Courier, monospace;
 .footer{
     grid-area: "main";
     width: 100%;
-    height: 200px;
-    background-color: aqua;
+    height: auto;
+    background-color: $color1;
+    padding: 40px 0;
+}
+
+.social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #4b4c4d;
+    a{
+        font-size: 24px;
+        color: inherit;
+        border: 2px solid white;
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        margin: 0 8px;
+        opacity: 0.7;
+        &:hover{
+            opacity: 1;
+            border-radius: 1rem 1rem 1rem 1rem;
+            background-color: white;
+            border: 1px solid black;
+        }
+    }
+}
+
+.nav--footer{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    li{
+        display: inline-block;
+        padding: 0 15px;
+    }
+    a{
+        color: inherit;
+        opacity: 0.8;
+        &:hover{opacity: 1;}
+    }
+}
+
+.copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 20pxpx;
+    font-weight: bold;
 }
