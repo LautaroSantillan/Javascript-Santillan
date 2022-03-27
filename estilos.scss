@@ -1,25 +1,29 @@
 // VARIABLES
 
-$color1:#2eff00;
-$color2:#3b5999;
-$color3:#e4405f;
-$color4:#666666;
-$color5:#4dc247;
+$color1:#e48f65;
+$color2:#253a42;
+$color3:#ecdcbe;
+$color4:#8f4646;
+$color5:#4a7584;
 
 $font1: 'Roboto Cn', sans-serif;
 $font2: 'Courier New', Courier, monospace;
 
-// Animaciones
+// ANIMACIONES
 @keyframes slideIn{
     from{}
     to{transform: translateX(0);}
 }
 
-// Estilos globales
+// ESTILOS GLOBALES
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: #000;
+    a{
+        text-decoration: none;
+    }
 }
 
 // GRID LAYOUT
@@ -37,49 +41,19 @@ $font2: 'Courier New', Courier, monospace;
 .header{
     grid-area: "header";
     width: 100%;
-    background-color: white;
-}
-
-nav{
-    padding-top: 1.25rem;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
-    text-transform: uppercase;
+    background-color: $color1;
     font-family: $font1;
-    display: grid;
-    grid-template-columns: auto 1fr 1fr auto;
-    grid-template-rows: 1fr;
-    grid-auto-columns: 1fr;
-    gap: 0;
-    grid-auto-flow: row;
-    grid-template-areas: "logo" "nav--visible" "nav--registro" "carrito";
-        h1 a{
-        text-decoration: none;
-        }
 }
 
-.logo{
-    grid-area: "logo";
-    background-color: #666666;
+.header--logo{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 10%;
+    text-transform: uppercase;
 }
 
-.nav--visible{
-    grid-area: "nav--visible";
-    background-color: #e4405f;
-}
-
-.nav--registro{
-    grid-area: "nav--registro";
-    background-color: aqua;
-}
-
-.carrito{
-    grid-area: "carrito";
-    background-color: blueviolet;
-    font-size: 30px;
-    padding: 10px;
-}
+.logo{display: flex;}
 
 .icono{
     height: 50px;
@@ -92,14 +66,65 @@ nav{
     line-height: 50px;
     transform: translateY(-100rem);
     animation: slideIn 1s forwards;
-    a{
-        color: black;
+    span{
+        color: $color4;
+    }
+    &:hover{
+        &::before, &::after{
+        transform: scaleX(1);
+        }
+    }
+    &::before, &::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.031rem;
+    background-color: $color4;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+    }
+    &::before{
+    top: 0;
+    transform-origin: left;
+    }
+    &::after {
+    bottom: 0;
+    transform-origin: left;
     }
 }
 
-.navbar{
+.carrito{
+    font-size: 2.25rem;
+    padding: 10px;
+    transform: translateY(-100rem);
+    animation: slideIn 1s forwards;
+}
+
+.header--nav{
     display: flex;
-    line-height: 50px;
+    background-color: #ec9c75;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2%;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+}
+
+.nav--visible{
+    display: flex;
+    li{
+    list-style: none;
+    transform: translateX(-100rem);
+    animation: slideIn .5s forwards;
+        &:nth-child(1){animation-delay: 0s;}
+        &:nth-child(2){animation-delay: .5s;}
+        &:nth-child(3){animation-delay: 1s;}
+        &:nth-child(4){animation-delay: 1.5s;}
+    }
+}
+
+.nav--registro{
+    display: flex;
     li{
     list-style: none;
     transform: translateX(100rem);
@@ -107,45 +132,40 @@ nav{
         &:nth-child(1){animation-delay: 0s;}
         &:nth-child(2){animation-delay: .5s;}
         &:nth-child(3){animation-delay: 1s;}
-        &:nth-child(4){animation-delay: 1.5s;}
-        &:nth-child(5){animation-delay: 2s;}
     }
 }
         
-.navbar a{
+.nav--visible li a, .nav--registro li a{
     padding: 1rem 0;
     margin: 0 3rem;
     position: relative;
     letter-spacing: 0.125rem;
-    text-decoration: none;
-        &:hover{
-        text-decoration: none;
-        color: black;
-            &::before, &::after{
-            transform: scaleX(1);
-            }
-        }
-        &:last-child{
-        margin-right: 0;
-        }
+    &:hover{
+    font-weight: bold;
+    color: $color4;
+    transition: all .5s;
         &::before, &::after{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 0.031rem;
-        background-color: $color2;
-        left: 0;
-        transform: scaleX(0);
-        transition: all .5s;
+        transform: scaleX(1);
         }
-        &::before{
-        top: 0;
-        transform-origin: left;
-        }
-        &::after {
-        bottom: 0;
-        transform-origin: right;
-        }
+    }
+    &::before, &::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.031rem;
+    background-color: $color4;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+    }
+    &::before{
+    top: 0;
+    transform-origin: left;
+    }
+    &::after {
+    bottom: 0;
+    transform-origin: right;
+    }
 }
 
 // MAIN
