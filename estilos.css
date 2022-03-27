@@ -80,8 +80,10 @@
 }
 
 .carrito {
-  font-size: 2.25rem;
+  font-size: 30px;
   padding: 10px;
+  border: 2px dashed black;
+  border-radius: 50%;
   transform: translateY(-100rem);
   animation: slideIn 1s forwards;
 }
