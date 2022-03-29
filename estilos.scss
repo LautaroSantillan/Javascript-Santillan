@@ -342,6 +342,94 @@ $font2: 'Courier New', Courier, monospace;
     }
 }
 
+// GALERIA
+
+.galeria {  
+    width: 100%;
+    height: auto;
+    padding: 2rem 2%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "galeria--img1 galeria--p1"
+    "galeria--p2 galeria--img2";
+}
+
+.galeria--img1 { 
+    grid-area: "galeria--img1"; 
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border: 0.125rem solid white;
+        filter: brightness(75%);
+        &:hover{
+            filter: brightness(100%);
+            transform: translateY(-0.125rem) scale(1.02);
+            transition: all 0.5s ease-in-out;
+        }
+    }
+}
+
+.galeria--p1 { 
+    grid-area: "galeria--p1"; 
+    background-color: $color4;
+    padding: 2rem;
+    border: 0.125rem solid white;
+    h3{
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+        text-decoration: underline;
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+    }
+    p{
+        color: white;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+}
+
+.galeria--p2 { 
+    grid-area: "galeria--p2"; 
+    background-color: $color4;
+    padding: 2rem;
+    border: 0.125rem solid white;
+    h3{
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: 1rem;
+    }
+    p{
+        color: white;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+}
+
+.galeria--img2 { 
+    grid-area: "galeria--img2";
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border: 0.125rem solid white;
+        filter: brightness(75%);
+        &:hover{
+            filter: brightness(100%);
+            transform: translateY(-0.125rem) scale(1.02);
+            transition: all 0.5s ease-in-out;
+        }
+    }
+}
+
+
 // FOOTER
 .footer{
     grid-area: "main";
@@ -412,5 +500,14 @@ $font2: 'Courier New', Courier, monospace;
     }
     .tarjeta--a{
         margin-top: -125px;
+    }
+    .galeria{
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+        "galeria--img1"
+        "galeria--p1"
+        "galeria--p2"
+        "galeria--img2";
     }
 }
