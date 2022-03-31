@@ -263,9 +263,11 @@ $font2: 'Courier New', Courier, monospace;
 // PRODUCTOS
 
 .productos--contendor{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 1.5rem;
+    grid-auto-flow: row;
     padding: 0.5rem 7%;
 }
 
@@ -491,7 +493,10 @@ $font2: 'Courier New', Courier, monospace;
 }
 
 @media screen and (max-width: 992px) {
-    .tarjetas--contenedor {
+    .productos--contendor{
+        grid-template-columns: auto;
+    }
+    .tarjetas--contenedor{
         grid-template-columns: auto;
         background-color: $color2;
     }
