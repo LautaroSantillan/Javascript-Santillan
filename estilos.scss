@@ -264,7 +264,7 @@ $font2: 'Courier New', Courier, monospace;
 
 .productos--contendor{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 1.5rem;
     grid-auto-flow: row;
@@ -493,9 +493,15 @@ $font2: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
 
+@media screen and (max-width: 1200px) {
+    .productos--contendor{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .productos--contendor{
-        grid-template-columns: auto;
+        grid-template-columns: 1fr 1fr;
     }
     .tarjetas--contenedor{
         grid-template-columns: auto;
@@ -515,5 +521,11 @@ $font2: 'Courier New', Courier, monospace;
         "galeria--p1"
         "galeria--p2"
         "galeria--img2";
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .productos--contendor{
+        grid-template-columns: auto;
     }
 }
