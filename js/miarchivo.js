@@ -1,13 +1,16 @@
+// FUNCIONES MATEMATICAS
+const suma = (a, b) => a + b
+const resta = (a, b) => a - b
+const mult = (a, b) => a * b
+const sumIva = x => x * 1.21
+const desc = x => x * 0.90 
+
 // Declaro mi lista de productos con sus caracteristicas
 class Producto {
     constructor(nombre, precio, volumen) {
         this.nombre = nombre.toUpperCase();
         this.precio = parseFloat(precio);
         this.volumen = volumen;
-    }
-    // Aplico un descuento de 10%
-    descuento(){
-    this.precio = this.precio * 0.90;
     }
 }
 
@@ -19,21 +22,53 @@ productos.push(new Producto("sevenup","450","2.5l"));
 productos.push(new Producto("baggio","120","1l"));
 productos.push(new Producto("agua","100","1.5l"));
 productos.push(new Producto("fernet","850","750ml"));
-productos.push(new Producto("gancia","420","980ml"));
+productos.push(new Producto("gancia","620","980ml"));
 productos.push(new Producto("smirnoff","770","750ml"));
-productos.push(new Producto("frizze","230","1l"));
+productos.push(new Producto("frizze","630","1l"));
 productos.push(new Producto("campari","670","750ml"));
 productos.push(new Producto("monster","230","500ml"));
 productos.push(new Producto("redbull","220","500ml"));
 productos.push(new Producto("ipa","300","500ml"));
 productos.push(new Producto("sky","840","750ml"));
-productos.push(new Producto("corona","200","330ml"));
-productos.push(new Producto("absolut","1700","1l"));
+productos.push(new Producto("corona","340","330ml"));
+productos.push(new Producto("absolut","1400","1l"));
 
-// Utilizo la sentencia for...of para modificar sus precios
-for(const producto of productos)
-    producto.descuento();
+// Productos con suma de IVA
+const productosIva = productos.map((p) => {
+    return {
+        nombre: p.nombre,
+        precio: p.precio * 1.21,
+        volumen: p.volumen,
+    }
+})
+console.log(productosIva)
 
-// Prueba de algunos metodos
-console.log(productos.length);
-console.log(productos.includes("manaos"));
+// Productos con descuento de 10%
+const productosDesc = productos.map((p) => {
+    return {
+        nombre: p.nombre,
+        precio: p.precio * 0.90,
+        volumen: p.volumen,
+    }
+})
+console.log(productosDesc)
+
+// Filtrado de precios
+const filtrobarato = productos.filter((p) => p.precio <= 600)
+console.log(filtrobarato)
+const filtrocaro = productos.filter((p) => p.precio > 600)
+console.log(filtrocaro)
+
+// Filtrado albabetico
+productos.sort((a,b) => {
+    if(a.nombre > b.nombre) {return 1}
+    if(a.nombre < b.nombre) {return -1}
+
+    return 0
+})
+console.log(productos)
+
+// Filtro de busqueda con prompt
+const busqueda = prompt("¿Que producto esta buscando?").toUpperCase()
+const search = productos.some(p => p.nombre.toUpperCase() == busqueda)
+alert(search)
