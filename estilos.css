@@ -387,14 +387,13 @@
 }
 .galeria--img1 img:hover {
   filter: brightness(100%);
-  transform: translateY(-0.125rem) scale(1.02);
   transition: all 0.5s ease-in-out;
 }
 
 .galeria--p1 {
   grid-area: "galeria--p1";
   background-color: #8f4646;
-  padding: 2rem;
+  padding: 5rem;
   border: 0.125rem solid white;
 }
 .galeria--p1 h3 {
@@ -409,41 +408,6 @@
   color: white;
   font-size: 1.5rem;
   line-height: 2.5rem;
-}
-
-.galeria--p2 {
-  grid-area: "galeria--p2";
-  background-color: #8f4646;
-  padding: 2rem;
-  border: 0.125rem solid white;
-}
-.galeria--p2 h3 {
-  color: white;
-  font-size: 3rem;
-  text-align: center;
-  text-decoration: underline;
-  margin-bottom: 1rem;
-}
-.galeria--p2 p {
-  color: white;
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-}
-
-.galeria--img2 {
-  grid-area: "galeria--img2";
-}
-.galeria--img2 img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border: 0.125rem solid white;
-  filter: brightness(75%);
-}
-.galeria--img2 img:hover {
-  filter: brightness(100%);
-  transform: translateY(-0.125rem) scale(1.02);
-  transition: all 0.5s ease-in-out;
 }
 
 .footer {
@@ -538,7 +502,7 @@
 }
 @media screen and (max-width: 576px) {
   .productos--contendor {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
