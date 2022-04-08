@@ -20,7 +20,7 @@
                     <img src="img/botellas.png" class="icono">
                     <h1 class="nombre">Trag<span>o</span>Mani<span>a</span></h1>
                 </a>
-                <div class="carrito">
+                <div class="carrito" id="carrito">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
             </div>
@@ -41,6 +41,10 @@
         </div>
         <!-- MAIN -->
         <div class="main">
+            <!-- CARRITO FLOTANTE -->
+            <div class="carrito-fixed">
+                <a href="#carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
             <!-- BANNER - PARALLAX -->
             <div class="banner">
                 <div class="banner--descripcion">
@@ -69,6 +73,12 @@
             </div>
             <!-- LISTADO DE PRODUCTOS -->
             <h2 class="productos--titulo" id="productos--lista">Nuestro <span>Productos</span></h2>
+            <div class="botones--contendor">
+                <button>ORDENAR A-Z</button>
+                <button>ORDENAR Z-A</button>
+                <button>ORDENAR PRECIO MENOR A MAYOR</button>
+                <button>ORDENAR PRECIO MAYOR A MENOR</button>
+            </div>
             <div class="productos--contendor">
                 <div class="producto--ind">
                     <img src="img/cocacola.jpg" alt="Coca-Cola">
