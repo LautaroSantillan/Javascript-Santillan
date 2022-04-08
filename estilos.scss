@@ -114,6 +114,7 @@ $font2: 'Courier New', Courier, monospace;
     justify-content: space-between;
     padding: 2rem 2%;
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    font-weight: bold;
     li a{
         position: relative;
         letter-spacing: 0.125rem;
@@ -170,7 +171,7 @@ $font2: 'Courier New', Courier, monospace;
     top: 50%;
     font-size: 30px;
     padding: 10px;
-    border: 2px dashed black;
+    border: 2px solid black;
     border-radius: 50%;
     background-color: $color6;
     transform: translateX(100rem);
@@ -214,6 +215,7 @@ $font2: 'Courier New', Courier, monospace;
         color: white;
         border-radius: 50px;
         font-size: 0.9rem;
+        font-weight: bold;
         transform: all 1s ease-out;
         &:hover{
             background: white;
@@ -327,18 +329,21 @@ $font2: 'Courier New', Courier, monospace;
         justify-content: center;
         margin-top: 1rem;
         background: $color3;
-        color: #fff;
+        color: $color4;
         padding: 1rem;
         font-size: 1.5rem;
+        font-weight: bold;
         text-align: center;
         cursor: pointer;
         border-radius: 0.5rem;
+        border-color: $color3;
         outline: 2px solid $color3;
         outline-offset: 2px;
         transition: all .5s;
         &:hover{
-            background-color: black;
-            color: white;
+            background-color: $color4;
+            border-color: $color4;
+            color: $color3;
             outline: black;
         }
     }
