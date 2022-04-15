@@ -49,10 +49,26 @@ for(const Producto of productos) {
                         <div class="producto--precios">
                         <p> $ ${Producto.precio}</p>
                         </div>
-                        <button type="button" class="btn">Agregar al Carrito</button>
+                        <button type="button" class="btnAddCart" id="producto-${Producto.id}">Agregar al Carrito</button>
                     </div>
                     `
     document.getElementById('productos--contenedor').innerHTML = htmlCatalogo
+}
+
+// Funcion del carrito
+const cart = []
+
+const btns = document.getElementsByClassName('btnAddCart')
+for (const btn of btns) {
+    btn.onclick = addToCart
+}
+
+function addToCart(e) {
+    const btn = e.target
+    const id = btn.id.split('-')[1]
+    
+    const Producto = productos.find(p => p.id == id)
+    console.log("Se agrego el producto: ", Producto, "al carrito")
 }
 
 // Productos con suma de IVA
