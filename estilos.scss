@@ -265,7 +265,7 @@ $font2: 'Courier New', Courier, monospace;
 
 // BOTONES
 
-.botones--contendor{
+.botones--contenedor{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -291,7 +291,7 @@ $font2: 'Courier New', Courier, monospace;
 
 // PRODUCTOS
 
-.productos--contendor{
+.productos--contenedor{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -350,9 +350,8 @@ $font2: 'Courier New', Courier, monospace;
 }
 
 .producto--precios{
-    display: flex;
-    justify-content: center;
     font-size: 2.5rem;
+    font-weight: bold;
     color: #333;
     margin-top: 0.5rem;
 }
@@ -489,13 +488,13 @@ $font2: 'Courier New', Courier, monospace;
 }
 
 @media screen and (max-width: 1200px) {
-    .productos--contendor{
+    .productos--contenedor{
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 992px) {
-    .productos--contendor{
+    .productos--contenedor{
         grid-template-columns: 1fr 1fr;
     }
     .tarjetas--contenedor{
@@ -520,7 +519,7 @@ $font2: 'Courier New', Courier, monospace;
 }
 
 @media screen and (max-width: 576px) {
-    .productos--contendor{
+    .productos--contenedor{
         grid-template-columns: 1fr 1fr;
     }
 }

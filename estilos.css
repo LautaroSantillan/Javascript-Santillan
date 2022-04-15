@@ -250,14 +250,14 @@
   margin: 0.625rem;
 }
 
-.botones--contendor {
+.botones--contenedor {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem 5%;
   justify-content: center;
 }
-.botones--contendor button {
+.botones--contenedor button {
   margin-top: 1rem;
   padding: 1rem;
   font-size: 1.5rem;
@@ -270,11 +270,11 @@
   text-shadow: 1px 1px 1px black;
   transition: all 0.5s ease-in-out;
 }
-.botones--contendor button:hover {
+.botones--contenedor button:hover {
   background-position: 0;
 }
 
-.productos--contendor {
+.productos--contenedor {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -336,9 +336,8 @@
 }
 
 .producto--precios {
-  display: flex;
-  justify-content: center;
   font-size: 2.5rem;
+  font-weight: bold;
   color: #333;
   margin-top: 0.5rem;
 }
@@ -472,12 +471,12 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .productos--contendor {
+  .productos--contenedor {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media screen and (max-width: 992px) {
-  .productos--contendor {
+  .productos--contenedor {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -501,7 +500,7 @@
   }
 }
 @media screen and (max-width: 576px) {
-  .productos--contendor {
+  .productos--contenedor {
     grid-template-columns: 1fr 1fr;
   }
 }
