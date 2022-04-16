@@ -288,6 +288,7 @@
 .producto--ind img {
   height: 200px;
   width: 200px;
+  margin-bottom: 0.5rem;
 }
 .producto--ind h3 {
   color: black;
@@ -321,27 +322,6 @@
   font-size: 2.5rem;
   font-weight: bold;
   color: #333;
-  margin-top: 0.5rem;
-}
-
-.producto--cantidad {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.producto--cantidad span {
-  padding: 0 0.7rem;
-  font-size: 1.75rem;
-}
-.producto--cantidad input {
-  border: 0.1rem solid rgba(0, 0, 0, 0.3);
-  font-size: 1.5rem;
-  font-weight: bolder;
-  color: black;
-  padding: 0.5rem;
-  width: 5rem;
-  background: rgba(0, 0, 0, 0.05);
-  text-align: center;
 }
 
 .galeria {
@@ -477,13 +457,28 @@
 
   .galeria {
     grid-template-columns: auto;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "galeria--img1" "galeria--p1" "galeria--p2" "galeria--img2";
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "galeria--img1" "galeria--p1";
   }
 }
 @media screen and (max-width: 576px) {
   .productos--contenedor {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .producto--ind img {
+    height: 125px;
+    width: 120px;
+  }
+  .producto--ind h3 {
+    font-size: 1.5rem;
+  }
+  .producto--ind button {
+    font-size: 1rem;
+  }
+
+  .producto--precios {
+    font-size: 1.5rem;
   }
 }
 

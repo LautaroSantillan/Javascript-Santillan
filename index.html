@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="autor" content="Lautaro Santillan">
     <title>TragoMania | Tienda Virtual</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet">
     <link rel="icon" sizes="16x16" href="img/botellas.png">
     <script src="https://kit.fontawesome.com/79808c372d.js" crossorigin="anonymous"></script>
 </head>
@@ -78,7 +79,7 @@
             <div class="productos--contenedor" id="productos--contenedor">
             </div>
             <!-- GALERIA -->
-            <div class="galeria" id="galeria">
+            <div class="galeria" id="galeria" data-aos="zoom-in">
                 <div class="galeria--img1">
                     <img src="img/gentebebidas.jpg" alt="GenteBebiendo">
                 </div>
@@ -90,7 +91,7 @@
             </div>
         </div>
         <!-- FOOTER -->
-        <div class="footer" id="contacto">
+        <div class="footer" id="contacto" data-aos="zoom-in">
             <!-- REDES SOCIALES -->
             <div class="social">
                 <a href="#"><i class="fa-brands fa-facebook social--facebook"></i></a>
@@ -110,6 +111,13 @@
                 <small>&copy; 2022 <b>TRAGOMANIA</b> - Todos los Derechos Reservados.</small>
             </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
     <script src="js/miarchivo.js"></script>
 </body>
 </html>
