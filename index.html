@@ -16,24 +16,16 @@
     <div class="grid--container">
         <!-- HEADER -->
         <div class="header" id="home">
-            <div class="header--logo">
-                <a href="index.html" class="logo">
-                    <img src="img/botellas.png" class="icono">
-                    <h1 class="nombre">Trag<span>o</span>Mani<span>a</span></h1>
-                </a>
-                <div class="carrito" id="carrito">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-            </div>
+            <a href="index.html" class="logo">
+                <img src="img/botellas.png" class="icono">
+                <h1 class="nombre">Trag<span>o</span>Mani<span>a</span></h1>
+            </a>
             <!-- NAVBAR -->
-            <nav class="header--nav">
-                <div class="nav--visible">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="#productos--lista">PRODUCTOS</a></li>
-                    <li><a href="#galeria">GALERIA</a></li>
-                    <li><a href="#contacto">CONTACTO</a></li>
-                </div>
-            </nav>
+            <div class="header--nav nav--animaciones">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#productos--lista">PRODUCTOS</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+            </div>
         </div>
         <!-- MAIN -->
         <div class="main">
@@ -72,14 +64,14 @@
             <div class="botones--contenedor">
                 <button>ORDENAR A-Z</button>
                 <button>ORDENAR Z-A</button>
-                <button>ORDENAR PRECIO MENOR A MAYOR</button>
+                <button id="precioBarato">ORDENAR PRECIOS DE MENOR A MAYOR</button>
                 <button>ORDENAR PRECIO MAYOR A MENOR</button>
             </div>
             <!-- CATALOGO -->
             <div class="productos--contenedor" id="productos--contenedor">
             </div>
             <!-- GALERIA -->
-            <div class="galeria" id="galeria" data-aos="zoom-in">
+            <div class="galeria" data-aos="zoom-in">
                 <div class="galeria--img1">
                     <img src="img/gentebebidas.jpg" alt="GenteBebiendo">
                 </div>
@@ -103,7 +95,6 @@
             <div class="nav--footer">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#productos--lista">PRODUCTOS</a></li>
-                <li><a href="#galeria">GALERIA</a></li>
                 <li><a href="#contacto">CONTACTO</a></li>
             </div>
             <!-- COPYRIGHT -->
