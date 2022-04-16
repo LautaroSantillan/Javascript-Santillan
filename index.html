@@ -21,11 +21,16 @@
                 <h1 class="nombre">Trag<span>o</span>Mani<span>a</span></h1>
             </a>
             <!-- NAVBAR -->
-            <div class="header--nav nav--animaciones">
+            <input type="checkbox" id="menu">
+            <label for="menu" class="nav--hamburguesa">
+                <i class="fas fa-bars"></i>
+            </label>
+            </label>
+            <ul class="header--nav nav--animaciones">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="#productos--lista">PRODUCTOS</a></li>
                 <li><a href="#contacto">CONTACTO</a></li>
-            </div>
+            </ul>
         </div>
         <!-- MAIN -->
         <div class="main">
@@ -41,7 +46,7 @@
                     <a href="#productos--lista">VER PRODUCTOS</a>
                 </div>
             </div>
-        <!-- TARJETAS -->
+            <!-- TARJETAS -->
             <div class="tarjetas--contenedor">
                 <div class="tarjetas tarjeta--a">
                     <i class="fa-solid fa-certificate"></i>
@@ -102,6 +107,7 @@
                 <small>&copy; 2022 <b>TRAGOMANIA</b> - Todos los Derechos Reservados.</small>
             </div>
     </div>
+    <!-- SCRIPTS EFECTOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -109,7 +115,9 @@
             once: true,
         });
     </script>
+    <!-- SCRIPTS ALERTAS -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- LINKEO A JS PROPIO -->
     <script src="js/miarchivo.js"></script>
 </body>
 </html>

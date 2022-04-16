@@ -11,12 +11,14 @@ $font1: 'Roboto Cn', sans-serif;
 $font2: 'Courier New', Courier, monospace;
 
 // ANIMACIONES
+
 @keyframes slideIn{
     from{}
     to{transform: translateX(0);}
 }
 
 // ESTILOS GLOBALES
+
 *{
     padding: 0;
     margin: 0;
@@ -28,6 +30,7 @@ $font2: 'Courier New', Courier, monospace;
 }
 
 // GRID LAYOUT
+
 .grid--container{
     display: grid;
     grid-template-columns: 1fr;
@@ -39,6 +42,7 @@ $font2: 'Courier New', Courier, monospace;
 }
 
 // HEADER
+
 .header{
     grid-area: "header";
     width: 100%;
@@ -95,6 +99,21 @@ $font2: 'Courier New', Courier, monospace;
 }
 
 // NAVBAR
+
+.nav--hamburguesa {
+    display: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 1.875rem;
+    padding: 0 1.25rem;
+    line-height: 3.125rem;
+    cursor: pointer;
+}
+
+#menu{
+    display: none;
+}
 
 .header--nav{
     display: flex;
@@ -217,7 +236,6 @@ $font2: 'Courier New', Courier, monospace;
 
 .tarjetas {
     border: 1px solid black;
-    // box-shadow: -1px 0 5px #0000001f;
     background-color: white;
     text-align: center;
     padding-top: 1.5rem;
@@ -388,6 +406,7 @@ $font2: 'Courier New', Courier, monospace;
 }
 
 // FOOTER
+
 .footer{
     grid-area: "main";
     width: 100%;
@@ -447,6 +466,8 @@ $font2: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
 
+// MEDIA QUERIES
+
 @media screen and (max-width: 1200px) {
     .productos--contenedor{
         grid-template-columns: 1fr 1fr 1fr;
@@ -473,6 +494,38 @@ $font2: 'Courier New', Courier, monospace;
         grid-template-areas:
         "galeria--img1"
         "galeria--p1";
+    }
+}
+
+@media screen and (max-width: 768px){
+    .nav--hamburguesa {
+        display: block;
+    }
+    .header--nav {
+        position: fixed;
+        background-color: $color1;
+        width: 100%;
+        height: 100vh;
+        top: 65px;
+        left: -100%;
+        margin: 0;
+        text-align: center;
+        align-items: center;
+        transition: all .5s;
+        z-index: 2;
+        flex-direction: column;
+        justify-content: space-evenly;
+        overflow-y: auto;
+        li{
+            display: block;
+            a{
+                font-size: 1.2rem;
+                color: $color4;
+            }
+        }
+    }
+    #menu:checked ~ ul {
+        left: 0;
     }
 }
 
