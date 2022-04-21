@@ -127,29 +127,23 @@
   animation-delay: 1s;
 }
 
+.carrito {
+  font-size: 30px;
+  padding: 10px;
+  background-color: #e48f65;
+  transform: translateY(-100rem);
+  animation: slideIn 1s forwards;
+}
+.carrito:hover {
+  font-size: 35px;
+  transition: all 0.5s;
+}
+
 .main {
   grid-area: "main";
   width: 100%;
   height: auto;
   background-color: #ecdcbe;
-}
-
-.carrito-fixed {
-  position: fixed;
-  z-index: 2;
-  right: 1%;
-  top: 85%;
-  font-size: 30px;
-  padding: 10px;
-  border: 2px solid black;
-  border-radius: 50%;
-  background-color: #e48f65;
-  transform: translateX(100rem);
-  animation: slideIn 1s forwards;
-}
-.carrito-fixed:hover {
-  font-size: 40px;
-  transition: all 0.5s;
 }
 
 .banner {
@@ -496,6 +490,11 @@
   }
 }
 @media screen and (max-width: 576px) {
+  .header {
+    justify-content: space-evenly;
+    padding: 0.5rem 2%;
+  }
+
   .productos--contenedor {
     grid-template-columns: 1fr 1fr;
   }
