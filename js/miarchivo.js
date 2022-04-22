@@ -1,11 +1,3 @@
-// FUNCIONES MATEMATICAS
-
-const suma = (a, b) => a + b
-const resta = (a, b) => a - b
-const mult = (a, b) => a * b
-const sumIva = x => x * 1.21
-const desc = x => x * 0.90 
-
 // Declaro las caracteristicas que van a tener los productos
 
 class producto {
@@ -74,7 +66,7 @@ function mostrarProductos(){
 
 // Carrito
 
-const cart = []
+const carrito = []
 
 const btncart = document.getElementsByClassName('btnAddCart')
 for (const btn of btncart) {
