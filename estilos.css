@@ -30,8 +30,8 @@
   font-family: "Roboto Cn", sans-serif;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 7%;
+  justify-content: space-between !important;
+  padding: 0.5rem 7% !important;
   text-transform: uppercase;
   position: fixed;
   z-index: 5;
@@ -54,7 +54,7 @@
   animation: slideIn 1s forwards;
 }
 .nombre span {
-  color: #8f4646;
+  color: #8f4646 !important;
 }
 .nombre:hover::before, .nombre:hover::after {
   transform: scaleX(1);
@@ -99,7 +99,7 @@
   justify-content: center;
   padding: 2rem 2%;
   font-weight: bold;
-  margin: 0 !important;
+  margin: 0;
 }
 .header--nav li a {
   position: relative;
@@ -131,6 +131,7 @@
 .carrito {
   font-size: 30px;
   padding: 10px;
+  line-height: 50px;
   background-color: #e48f65;
   transform: translateY(-100rem);
   animation: slideIn 1s forwards;
@@ -166,7 +167,7 @@
 }
 .banner--descripcion p {
   margin: 2rem 0 3rem 0;
-  color: white;
+  color: white !important;
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -175,8 +176,8 @@
   border: 2px solid white;
   padding: 0.6rem 3.5rem;
   margin: auto;
-  opacity: 0.85;
-  color: white;
+  opacity: 0.85 !important;
+  color: white !important;
   border-radius: 50px;
   font-size: 0.9rem;
   font-weight: bold;
@@ -184,7 +185,7 @@
 }
 .banner--descripcion a:hover {
   background: white;
-  color: black;
+  color: black !important;
   opacity: 1;
   box-shadow: 0rem 0.313rem 0.625rem 0.125rem rgba(0, 0, 0, 0.9);
 }
@@ -193,7 +194,7 @@
   font-style: italic;
   font-weight: bold;
   text-transform: uppercase;
-  color: white;
+  color: white !important;
 }
 
 .tarjetas--contenedor {
@@ -407,7 +408,7 @@
 }
 .social a {
   font-size: 24px;
-  color: inherit;
+  color: inherit !important;
   border: 2px solid white;
   width: 40px;
   height: 40px;
@@ -438,7 +439,7 @@
   padding: 0 15px;
 }
 .nav--footer a {
-  color: inherit;
+  color: inherit !important;
   opacity: 0.8;
 }
 .nav--footer a:hover {
@@ -450,6 +451,9 @@
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
+}
+.copyright small {
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1200px) {
@@ -482,6 +486,10 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .header {
+    justify-content: space-around !important;
+  }
+
   .nav--hamburguesa {
     display: block;
   }
@@ -494,6 +502,7 @@
     top: 65px;
     left: -100%;
     margin: 0;
+    line-height: 50px;
     text-align: center;
     align-items: center;
     transition: all 0.5s;
@@ -507,11 +516,18 @@
   }
   .header--nav li a {
     font-size: 1.2rem;
-    color: #8f4646;
+    color: #8f4646 !important;
   }
 
   #menu:checked ~ ul {
     left: 0;
+  }
+
+  .banner--descripcion h2 {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .banner--descripcion p {
+    background-color: rgba(0, 0, 0, 0.2);
   }
 }
 @media screen and (max-width: 576px) {
