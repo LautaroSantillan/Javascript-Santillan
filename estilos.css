@@ -325,6 +325,15 @@
   font-weight: bold;
 }
 
+.botonFn {
+  padding: 0.5rem;
+}
+
+.botonCart {
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+
 .galeria {
   width: 100%;
   height: auto;
