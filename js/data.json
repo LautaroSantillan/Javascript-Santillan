@@ -11,7 +11,7 @@
         "title": "pepsi",
         "precio": 300,
         "vol": "2.5lt",
-        "img": "img/pepsi.jpg"
+        "img": "img/pepsi.webp"
     },
     {
         "id": 3, 
@@ -138,5 +138,12 @@
         "precio": 170,
         "vol": "1lt",
         "img": "img/quilmes.jpg"
+    },
+    {
+        "id": 21,
+        "title": "brahma",
+        "precio": 150,
+        "vol": "473ml",
+        "img": "img/brahma.jpg"
     }
 ]
