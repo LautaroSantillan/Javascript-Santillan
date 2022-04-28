@@ -42,11 +42,11 @@ productos.push(new producto("20", "quilmes","170","1lt", "img/quilmes.jpg"));
 //     for(const producto of productos) {
 //     htmlCatalogo += `
 //                 <div class="producto--ind item" data-aos="zoom-in">
-//                     <img src="${producto.img}" alt="ImagenDe${producto.nombre}" class="itemimg">
-//                     <h3 class="itemtitle"> ${producto.nombre} </h3>
-//                     <h3 class="itemvol"> ${producto.volumen} </h3>
+//                     <img src="${producto.img}" alt="ImagenDe${producto.nombre}" class="item-img">
+//                     <h3 class="item-title"> ${producto.nombre} </h3>
+//                     <h3 class="item-vol"> ${producto.volumen} </h3>
 //                     <div class="producto--precios">
-//                         <p class="itemprice">$${producto.precio}</p>
+//                         <p class="item-price">$${producto.precio}</p>
 //                     </div>
 //                     <button type="button" class="btnAddCart" id="producto-${producto.id}">Agregar al Carrito</button>
 //                 </div>
@@ -56,7 +56,9 @@ productos.push(new producto("20", "quilmes","170","1lt", "img/quilmes.jpg"));
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     mostrarProductos();
+//     renderproductos();
 // })
+
 
 // ORDEN ALFABETICO A-Z
 
@@ -152,7 +154,7 @@ for(const producto of productos) {
     document.getElementById('productos--contenedor').innerHTML = htmlCatalogo
 }
 
-const carrito = []
+let carrito = []
 
 const btncart = document.querySelectorAll('.btnAddCart')
 btncart.forEach(addToCart => {
@@ -218,6 +220,7 @@ function addItemToShoppingCart(itemTitle, itemVol, itemPrice, itemImg){
     </div>
     `;
     shoppingCartRow.innerHTML = shoppingCartContent;
+
     shoppingCartItemsContainer.append(shoppingCartRow);
 
     shoppingCartRow.querySelector('.buttonDelete').addEventListener('click', removeShoppingCartItem);
@@ -231,6 +234,7 @@ function addItemToShoppingCart(itemTitle, itemVol, itemPrice, itemImg){
 
 function updateShoppingCartTotal(){
     let total = 0;
+
     const shoppingCartTotal = document.querySelector('.shoppingCartTotal');
     
     shoppingCartItems = document.querySelectorAll('.shoppingCartItem');
@@ -243,7 +247,7 @@ function updateShoppingCartTotal(){
         total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
         
         shoppingCartTotal.innerHTML = `$${total}`
-        addLocalStorage();
+        // addLocalStorage();
     })
 }
 
@@ -280,14 +284,20 @@ function comprarButtonClicked(){
 
 // LOCALSTORAGE
 
-function addLocalStorage(){
-    localStorage.setItem('.shoppingCartTotal', JSON.stringify(carrito));
-}
+localStorage(producto){}
+    let productoss;
+    productos = this.addLocalStorage();
+    productos.push(producto);
 
-window.onload = function(){
-    const localstorage = JSON.parse(localStorage.getItem('.shoppingCartTotal'))
-    if(localstorage){
-        carrito = localstorage;
-        renderCarrito();
+
+addLocalStorage(){
+    let productoLS;
+
+    if(localStorage.getItem('.productos') === null){
+        productoLS = [];
     }
+    else{
+        productoLS = JSON.parse(localStorage.getItem('.productos'));
+    }
+    return productoLS;
 }

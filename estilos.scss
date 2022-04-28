@@ -308,8 +308,7 @@ $font2: 'Courier New', Courier, monospace;
     background-color: white;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     img{
-        height: 200px;
-        width: 200px;
+        height: 250px;
         margin-bottom: 0.5rem;
         &:hover{
             filter: brightness(108%);
@@ -319,12 +318,17 @@ $font2: 'Courier New', Courier, monospace;
     }
     h3{
         color: black;
-        font-size: 2.5rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    p{
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
     }
     button{
         align-items: center;
         justify-content: center;
-        margin-top: 1rem;
         background: $color3;
         color: $color4;
         padding: 1rem;
@@ -346,37 +350,11 @@ $font2: 'Courier New', Courier, monospace;
     }
 }
 
-.producto--precios{
-    font-size: 2.5rem;
+// CARRITO
+
+.titleItem{
+    text-transform: uppercase;
     font-weight: bold;
-    color: #333;
-}
-
-// CARRITO 
-
-.shopping-cart-items {
-    padding: 20px 0px;
-}
-
-.shopping-cart-header {
-    border-bottom: 1px solid #ccc;
-}
-
-.shopping-cart-image {
-    max-width: 80px;
-    border-radius: 20px;
-}
-
-.shopping-cart-quantity-input {
-    max-width: 45px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background: #eee;
-    padding: 5px;
-}
-
-.shopping-cart-total {
-    min-height: 96px;
 }
 
 // GALERIA
@@ -495,15 +473,15 @@ $font2: 'Courier New', Courier, monospace;
 // MEDIA QUERIES
 
 @media screen and (max-width: 1200px) {
-    .productos--contenedor{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+    // .productos--contenedor{
+    //     grid-template-columns: 1fr 1fr 1fr;
+    // }
 }
 
 @media screen and (max-width: 992px) {
-    .productos--contenedor{
-        grid-template-columns: 1fr 1fr;
-    }
+    // .productos--contenedor{
+    //     grid-template-columns: 1fr 1fr;
+    // }
     .tarjetas--contenedor{
         grid-template-columns: auto;
         background-color: $color2;
@@ -572,22 +550,22 @@ $font2: 'Courier New', Courier, monospace;
         justify-content: space-evenly;
         padding: 0.5rem 2%;
     }
-    .productos--contenedor{
-        grid-template-columns: 1fr 1fr;
-    }
-    .producto--ind{
-        img {
-            height: 125px;
-            width: 120px;
-        }
-        h3{
-            font-size: 1.5rem;
-        }
-        button{
-            font-size: 1rem;
-        }
-    }
-    .producto--precios {
-        font-size: 1.5rem;
-    }
+    // .template-card{
+    //     grid-template-columns: 1fr 1fr;
+    // }
+    // .producto--ind{
+    //     img {
+    //         height: 125px;
+    //         width: 120px;
+    //     }
+    //     h3{
+    //         font-size: 1.5rem;
+    //     }
+    //     button{
+    //         font-size: 1rem;
+    //     }
+    // }
+    // .producto--precios {
+    //     font-size: 1.5rem;
+    // }
 }

@@ -279,8 +279,7 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 .producto--ind img {
-  height: 200px;
-  width: 200px;
+  height: 250px;
   margin-bottom: 0.5rem;
 }
 .producto--ind img:hover {
@@ -290,12 +289,17 @@
 }
 .producto--ind h3 {
   color: black;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.producto--ind p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
 }
 .producto--ind button {
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
   background: #ecdcbe;
   color: #8f4646;
   padding: 1rem;
@@ -316,35 +320,9 @@
   outline: black;
 }
 
-.producto--precios {
-  font-size: 2.5rem;
+.titleItem {
+  text-transform: uppercase;
   font-weight: bold;
-  color: #333;
-}
-
-.shopping-cart-items {
-  padding: 20px 0px;
-}
-
-.shopping-cart-header {
-  border-bottom: 1px solid #ccc;
-}
-
-.shopping-cart-image {
-  max-width: 80px;
-  border-radius: 20px;
-}
-
-.shopping-cart-quantity-input {
-  max-width: 45px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: #eee;
-  padding: 5px;
-}
-
-.shopping-cart-total {
-  min-height: 96px;
 }
 
 .galeria {
@@ -457,16 +435,7 @@
   font-weight: 500;
 }
 
-@media screen and (max-width: 1200px) {
-  .productos--contenedor {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
 @media screen and (max-width: 992px) {
-  .productos--contenedor {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .tarjetas--contenedor {
     grid-template-columns: auto;
     background-color: #253a42;
@@ -535,25 +504,6 @@
   .header {
     justify-content: space-evenly;
     padding: 0.5rem 2%;
-  }
-
-  .productos--contenedor {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .producto--ind img {
-    height: 125px;
-    width: 120px;
-  }
-  .producto--ind h3 {
-    font-size: 1.5rem;
-  }
-  .producto--ind button {
-    font-size: 1rem;
-  }
-
-  .producto--precios {
-    font-size: 1.5rem;
   }
 }
 

@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "title": "cocacola",
+        "precio": 350,
+        "vol": "2.5lt",
+        "img": "img/cocacola.jpg"
+    },
+    {
+        "id": 2,
+        "title": "pepsi",
+        "precio": 300,
+        "vol": "2.5lt",
+        "img": "img/pepsi.jpg"
+    },
+    {
+        "id": 3, 
+        "title": "sevenup",
+        "precio": 250,
+        "vol": "2.25lt",
+        "img": "img/7up.jpg"
+    },
+    {
+        "id": 4,
+        "title": "baggio",
+        "precio": 120,
+        "vol": "1lt",
+        "img": "img/baggio.jpg"
+    },
+    {
+        "id": 5,
+        "title": "agua",
+        "precio": 100,
+        "vol": "1lt",
+        "img": "img/agua.jpg"
+    },
+    {
+        "id": 6,
+        "title": "fernet",
+        "precio": 850,
+        "vol": "750ml",
+        "img": "img/fernet.jpg"
+    },
+    {
+        "id": 7, 
+        "title": "gancia",
+        "precio": 620,
+        "vol": "980ml",
+        "img": "img/gancia.jpg"
+    },
+    {
+        "id": 8,
+        "title": "smirnoff",
+        "precio": 770,
+        "vol": "750ml",
+        "img": "img/smirnoff.jpg"
+    },
+    {
+        "id": 9,
+        "title": "frizze",
+        "precio": 630,
+        "vol": "1lt",
+        "img": "img/frizze.jpg"
+    },
+    {
+        "id": 10, 
+        "title": "campari",
+        "precio": 670,
+        "vol": "750ml",
+        "img": "img/campari.jpg"
+    },
+    {
+        "id": 11,
+        "title": "monster",
+        "precio": 230, 
+        "vol": "500ml",
+        "img": "img/monster2.jpg"
+    },
+    { 
+        "id": 12,
+        "title": "redlabel",
+        "precio": 2800,
+        "vol": "750ml",
+        "img": "img/redlabel.jpg"
+    },
+    {
+        "id": 13,
+        "title": "ipa",
+        "precio": 300,
+        "vol": "500ml",
+        "img": "img/ipa.jpg"
+    },
+    {
+        "id": 14, 
+        "title": "sky",
+        "precio": 840,
+        "vol": "750ml",
+        "img": "img/sky.jpg"
+    },
+    {
+        "id": 15,
+        "title": "corona",
+        "precio": 340,
+        "vol": "330ml",
+        "img": "img/corona.jpg"
+    },
+    {
+        "id": 16,
+        "title": "absolut",
+        "precio": 1400,
+        "vol": "l1t",
+        "img": "img/absolut.jpg"
+    },
+    {
+        "id": 17,
+        "title": "redbull",
+        "precio": 220,
+        "vol": "500ml",
+        "img": "img/redbull.jpg"
+    },
+    {
+        "id": 18,
+        "title": "drlemnon",
+        "precio": 340,
+        "vol": "1lt",
+        "img": "img/drlemon.jpg"
+    },
+    {
+        "id": 19,
+        "title": "termidor",
+        "precio": 200,
+        "vol": "1lt",
+        "img": "img/termidor.jpg"
+    },
+    {
+        "id": 20,
+        "title": "quilmes",
+        "precio": 170,
+        "vol": "1lt",
+        "img": "img/quilmes.jpg"
+    }
+]
