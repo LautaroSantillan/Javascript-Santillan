@@ -1,3 +1,4 @@
+// CONSTANTES Y VARIABLES
 const cards = document.getElementById('cards')
 const items = document.getElementById('items')
 const footer = document.getElementById('footer')
@@ -7,14 +8,25 @@ const templateCarrito = document.getElementById('template-carrito').content
 const fragment = document.createDocumentFragment()
 let carrito = []
 
+// ESCUCHA DE EVENTOS
 document.addEventListener('DOMContentLoaded', () => {
     fetchData();
+    // LOCALSTORAGE
+    if(localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        pintarCarrito()
+    }
 })
 
 cards.addEventListener('click', e => {
     addCarrito(e)
 })
 
+items.addEventListener('click', e => {
+    btnSumar(e)
+})
+
+// ENLAZAR EL JSON
 const fetchData = async () => {
     try {
         const res = await fetch('js/data.json')
@@ -26,10 +38,11 @@ const fetchData = async () => {
     }
 }
 
+// AGREGAR ITEMS PRODUCTOS
 const pintarCards = data => {
     data.forEach(producto => {
         templateCard.querySelector('h3').textContent = producto.title + " " + producto.vol
-        templateCard.querySelector('p').textContent = producto.precio
+        templateCard.querySelector('.precio').textContent = producto.precio
         templateCard.querySelector('img').setAttribute("src", producto.img)
         templateCard.querySelector('.btn-dark').dataset.id = producto.id
         const clone = templateCard.cloneNode(true)
@@ -38,6 +51,7 @@ const pintarCards = data => {
     cards.appendChild(fragment)
 }
 
+// AGREGAR AL CARRITO
 const addCarrito = e => {
     if(e.target.classList.contains('btn-dark')){
         setCarrito(e.target.parentElement)
@@ -49,7 +63,7 @@ const setCarrito = objeto => {
     const producto = {
         id: objeto.querySelector('.btn-dark').dataset.id,
         title: objeto.querySelector('h3').textContent,
-        precio: objeto.querySelector('p').textContent,
+        precio: objeto.querySelector('.precio').textContent,
         cantidad: 1 
     }
     if(carrito.hasOwnProperty(producto.id)){
@@ -59,6 +73,7 @@ const setCarrito = objeto => {
     pintarCarrito()
 }
 
+// AGREGAR PRODUCTOS AL CARRITO
 const pintarCarrito = () => {
     items.innerHTML = ''
     Object.values(carrito).forEach(producto => {
@@ -73,8 +88,10 @@ const pintarCarrito = () => {
     })
     items.appendChild(fragment)
     pintarFooter()
+    localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
+// AGREGAR PRODUCTOS EN LA PARTE INFERIOR DEL CARRITO
 const pintarFooter = () => {
     footer.innerHTML = ''
     if(Object.keys(carrito).length === 0){
@@ -94,11 +111,45 @@ const pintarFooter = () => {
     fragment.appendChild(clone)
 
     footer.appendChild(fragment)
-
+    // VACIAR CARRITO - BOTON
     const boton = document.querySelector('#vaciar-carrito')
     boton.addEventListener('click', () => {
         carrito = {}
         pintarCarrito()
+        console.log("Se vacio el carrito")
     })
+    // COMPRAR CARRITO - BOTON
+    const btn = document.querySelector('#comprar-carrito')
+    btn.addEventListener('click', () => {
+        swal({
+            title: "Compra realizada!",
+            text: "¡Bien Hecho! Usted acaba de realizar su pedido.",
+            icon: "success",
+            button: "CONTINUAR LA COMPRA",
+        });
+        carrito = {}
+        pintarCarrito()
+        console.log("Se realizo la compra y se vacio el carrito")
+    })
+}
 
+// SUMAR/RESTAR PRODUCTOS - BOTON
+const btnSumar = e => {
+    if(e.target.classList.contains('btn-info')){
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad ++
+        carrito[e.target.dataset.id] = {...producto}
+        pintarCarrito()
+        console.log(carrito[e.target.dataset.id])
+    }
+    if(e.target.classList.contains('btn-danger')){
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad --
+        if(producto.cantidad == 0){
+            delete carrito[e.target.dataset.id]
+        }
+        console.log(carrito[e.target.dataset.id])
+        pintarCarrito()
+    }
+    e.stopPropagation()
 }
