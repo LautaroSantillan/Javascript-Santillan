@@ -249,15 +249,6 @@
   background-position: 0;
 }
 
-.productos--contenedor {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 1.5rem;
-  grid-auto-flow: row;
-  padding: 0.5rem 7%;
-}
-
 .productos--titulo {
   text-align: center;
   font-size: 5rem;
@@ -267,7 +258,7 @@
   color: #4a7584;
 }
 
-.producto--ind {
+.producto-individual {
   flex: 1 1 20rem;
   text-align: center;
   padding: 1rem;
@@ -278,26 +269,26 @@
   background-color: white;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
-.producto--ind img {
+.producto-individual img {
   height: 250px;
   margin-bottom: 0.5rem;
 }
-.producto--ind img:hover {
+.producto-individual img:hover {
   filter: brightness(108%);
   transform: translateY(-0.313rem) scale(1.01);
   transition: all 0.5s;
 }
-.producto--ind h3 {
+.producto-individual h3 {
   color: black;
   font-size: 2rem;
   text-transform: uppercase;
 }
-.producto--ind p {
+.producto-individual p {
   font-size: 2rem;
   font-weight: bold;
   color: #333;
 }
-.producto--ind button {
+.producto-individual button {
   align-items: center;
   justify-content: center;
   background: #ecdcbe;
@@ -313,15 +304,24 @@
   outline-offset: 2px;
   transition: all 0.5s;
 }
-.producto--ind button:hover {
+.producto-individual button:hover {
   background-color: #8f4646;
   border-color: #8f4646;
   color: #ecdcbe;
   outline: black;
 }
 
+.carritoTitulo {
+  text-transform: uppercase;
+  font-style: italic;
+}
+
 .titleItem {
   text-transform: uppercase;
+  font-weight: bold;
+}
+
+.cantidadTotal {
   font-weight: bold;
 }
 
@@ -460,50 +460,21 @@
     justify-content: space-around !important;
   }
 
-  .nav--hamburguesa {
-    display: block;
-  }
-
   .header--nav {
-    position: fixed;
-    background-color: #e48f65;
-    width: 100%;
-    height: 100vh;
-    top: 65px;
-    left: -100%;
-    margin: 0;
-    line-height: 50px;
-    text-align: center;
-    align-items: center;
-    transition: all 0.5s;
-    z-index: 2;
-    flex-direction: column;
-    justify-content: space-evenly;
-    overflow-y: auto;
-  }
-  .header--nav li {
-    display: block;
-  }
-  .header--nav li a {
-    font-size: 1.2rem;
-    color: #8f4646;
-  }
-
-  #menu:checked ~ ul {
-    left: 0;
-  }
-
-  .banner--descripcion h2 {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-  .banner--descripcion p {
-    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
   }
 }
 @media screen and (max-width: 576px) {
   .header {
     justify-content: space-evenly;
     padding: 0.5rem 2%;
+  }
+
+  .producto-individual h3 {
+    font-size: 1.5rem;
+  }
+  .producto-individual button {
+    font-size: 1rem;
   }
 }
 
