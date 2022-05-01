@@ -114,9 +114,15 @@ const pintarFooter = () => {
     // VACIAR CARRITO - BOTON
     const boton = document.querySelector('#vaciar-carrito')
     boton.addEventListener('click', () => {
+        swal({
+            title: "Compra eliminada!",
+            text: "Usted ha rechazado el pedido de compra.",
+            icon: "error",
+            button: "CONTINUAR VIENDO...",
+        });
         carrito = {}
         pintarCarrito()
-        console.log("Se vacio el carrito")
+        console.log("Se elimino la compra y se vacio el carrito")
     })
     // COMPRAR CARRITO - BOTON
     const btn = document.querySelector('#comprar-carrito')
@@ -139,8 +145,18 @@ const btnSumar = e => {
         const producto = carrito[e.target.dataset.id]
         producto.cantidad ++
         carrito[e.target.dataset.id] = {...producto}
-        pintarCarrito()
         console.log(carrito[e.target.dataset.id])
+        pintarCarrito()
+        Toastify({
+            text: "PRODUCTO AGREGADO!",
+            duration: 2000,
+            gravity: "bottom",
+            position: "center",
+            style: {
+                background: "linear-gradient(to bottom, #e48f65, #ecdcbe)",
+                color: "black",
+            },
+        }).showToast();
     }
     if(e.target.classList.contains('btn-danger')){
         const producto = carrito[e.target.dataset.id]
@@ -150,6 +166,16 @@ const btnSumar = e => {
         }
         console.log(carrito[e.target.dataset.id])
         pintarCarrito()
+        Toastify({
+            text: "PRODUCTO ELIMINADO!",
+            duration: 2000,
+            gravity: "bottom",
+            position: "center",
+            style: {
+                background: "linear-gradient(to bottom, #e48f65, #ecdcbe)",
+                color: "black",
+            },
+        }).showToast();
     }
     e.stopPropagation()
 }
