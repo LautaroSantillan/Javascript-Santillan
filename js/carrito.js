@@ -34,7 +34,7 @@ const fetchData = async () => {
         pintarCards(data)
         console.log(data)
     } catch (error) {
-        console.log(error)
+        console.log(error + " No se han podido encontrar los productos")
     }
 }
 
@@ -185,7 +185,20 @@ const btnSumar = e => {
 // ORDEN ALFABETICO A-Z
 // const btnOrderA = document.getElementsByClassName('ordenA')
 // for (const btn of btnOrderA) {
-//     btn.onclick = orderAtoZ
+//     btn.onclick = orderA
+// }
+
+// const OrderA = data => {
+//     const btnOrderA = document.getElementsByClassName('ordenA')
+//     for (const btn of btnOrderA) {
+//         btn.onclick = orderA
+//     }
+//     data.sort((a,b) => {
+//             if(a.title > b.title) {return 1}
+//             if(a.title < b.title) {return -1}
+//             return 0
+//         })
+//         console.log("Se ordeno alfabetica la lista de la A a la Z:", data)
 // }
 
 // function orderAtoZ(e){
@@ -204,16 +217,25 @@ const btnSumar = e => {
 // for (const btn of btnOrderZ) {
 //     btn.onclick = orderZtoA
 // }
+// function orderZtoA(e){
+//     const btn = e.target
+//     const carrito = data => {data.sort((a,b) => {
+//             if(a.title < b.title) {return 1}
+//             if(b.title < a.title) {return -1}
+//             return 0
+//         })
+//         console.log("HOLA")
+//         pintarCards()
+// }}
 
 // function orderZtoA(e){
 //     const btn = e.target
-//     const producto = productos.sort((a,b) => {
-//         if(a.nombre < b.nombre) {return 1}
-//         if(a.nombre > b.nombre) {return -1}
+//     const producto = Object.sort((a,b) => {
+//         if(a.title < b.title) {return 1}
+//         if(a.title > b.title) {return -1}
 //         return 0
 //     })
-//     console.log("Se ordeno alfabetica la lista de la Z a la A:", productos)
-//     mostrarProductos();
+//     console.log("HOLA")
 // }
 
 // ORDEN DE PRECIOS DE MENOR A MAYOR
