@@ -31,8 +31,8 @@ const fetchData = async () => {
     try {
         const res = await fetch('js/data.json')
         const data = await res.json()
-        pintarCards(data)
         console.log(data)
+        pintarCards(data)
     } catch (error) {
         console.log(error + " No se han podido encontrar los productos")
     }
@@ -179,99 +179,3 @@ const btnSumar = e => {
     }
     e.stopPropagation()
 }
-
-// PARA HACER DESPUES
-
-// ORDEN ALFABETICO A-Z
-// const btnOrderA = document.getElementsByClassName('ordenA')
-// for (const btn of btnOrderA) {
-//     btn.onclick = orderA
-// }
-
-// const OrderA = data => {
-//     const btnOrderA = document.getElementsByClassName('ordenA')
-//     for (const btn of btnOrderA) {
-//         btn.onclick = orderA
-//     }
-//     data.sort((a,b) => {
-//             if(a.title > b.title) {return 1}
-//             if(a.title < b.title) {return -1}
-//             return 0
-//         })
-//         console.log("Se ordeno alfabetica la lista de la A a la Z:", data)
-// }
-
-// function orderAtoZ(e){
-//     const btn = e.target
-//     const producto = data.sort((a,b) => {
-//         if(a.nombre > b.nombre) {return 1}
-//         if(a.nombre < b.nombre) {return -1}
-//         return 0
-//     })
-//     console.log("Se ordeno alfabetica la lista de la A a la Z:", productos)
-//     pintarCarrito()
-// }
-
-// ORDEN ALFABETICO Z-A
-// const btnOrderZ = document.getElementsByClassName('ordenZ')
-// for (const btn of btnOrderZ) {
-//     btn.onclick = orderZtoA
-// }
-// function orderZtoA(e){
-//     const btn = e.target
-//     const carrito = data => {data.sort((a,b) => {
-//             if(a.title < b.title) {return 1}
-//             if(b.title < a.title) {return -1}
-//             return 0
-//         })
-//         console.log("HOLA")
-//         pintarCards()
-// }}
-
-// function orderZtoA(e){
-//     const btn = e.target
-//     const producto = Object.sort((a,b) => {
-//         if(a.title < b.title) {return 1}
-//         if(a.title > b.title) {return -1}
-//         return 0
-//     })
-//     console.log("HOLA")
-// }
-
-// ORDEN DE PRECIOS DE MENOR A MAYOR
-// const btnCheap = document.getElementsByClassName('precioBarato')
-// for (const btn of btnCheap) {
-//     btn.onclick = precioBarato
-// }
-
-// function precioBarato(e){
-//     const btn = e.target
-//     const producto = productos.sort((p1, p2) => {
-//         if(p1.precio < p2.precio) {
-//             return -1;
-//         } else {
-//             return 0;
-//         }
-//     })
-//     console.log("Se ordenaron los precios de menor a mayor:", productos)
-//     mostrarProductos();
-// }
-
-// ORDEN DE PRECIOS DE MAYOR A MENOR
-// const btnExpensive = document.getElementsByClassName('precioCaro')
-// for (const btn of btnExpensive) {
-//     btn.onclick = precioCaro
-// }
-
-// function precioCaro(e){
-//     const btn = e.target
-//     const producto = productos.sort((p1, p2) => {
-//         if(p1.precio > p2.precio) {
-//             return -1;
-//         } else {
-//             return 0;
-//         }
-//     })
-//     console.log("Se ordenaron los precios de mayor a menor:", productos)
-//     mostrarProductos();
-// }
