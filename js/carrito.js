@@ -10,7 +10,7 @@ let carrito = []
 
 // ESCUCHA DE EVENTOS
 document.addEventListener('DOMContentLoaded', () => {
-    fetchData();
+    fetchData()
     // LOCALSTORAGE
     if(localStorage.getItem('carrito')){
         carrito = JSON.parse(localStorage.getItem('carrito'))
@@ -34,7 +34,7 @@ const fetchData = async () => {
         console.log(data)
         pintarCards(data)
     } catch (error) {
-        console.log(error + " No se han podido encontrar los productos")
+        console.log(error + "\nNo se han podido encontrar los productos")
     }
 }
 
@@ -156,7 +156,7 @@ const btnSumar = e => {
                 background: "linear-gradient(to bottom, #e48f65, #ecdcbe)",
                 color: "black",
             },
-        }).showToast();
+        }).showToast()
     }
     if(e.target.classList.contains('btn-danger')){
         const producto = carrito[e.target.dataset.id]
@@ -175,7 +175,7 @@ const btnSumar = e => {
                 background: "linear-gradient(to bottom, #e48f65, #ecdcbe)",
                 color: "black",
             },
-        }).showToast();
+        }).showToast()
     }
     e.stopPropagation()
 }

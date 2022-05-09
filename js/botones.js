@@ -11,7 +11,7 @@ let carrito = []
 
 // ESCUCHA DE EVENTOS
 document.addEventListener('DOMContentLoaded', () => {
-    fetchData();
+    fetchData()
 })
 
 ordenA.addEventListener('click', e => {
