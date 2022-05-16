@@ -251,32 +251,6 @@ $font2: 'Courier New', Courier, monospace;
     }
 }
 
-// BOTONES
-
-.botones--contenedor{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem 5%;
-    justify-content: center;
-    button{
-        margin-top: 1rem;
-        padding: 1rem;
-        font-size: 1.5rem;
-        cursor: pointer;
-        border-radius: 0.5rem;
-        background-image: linear-gradient(50deg, $color1 50%, transparent 50%);
-        background-position: 100%;
-        background-size: 250%;
-        border-color: $color1;
-        text-shadow: 1px 1px 1px black; 
-        transition: all 0.5s ease-in-out;
-        &:hover{
-            background-position: 0;
-        }
-    }
-}
-
 // PRODUCTOS
 
 .productos--titulo{
@@ -517,15 +491,14 @@ $font2: 'Courier New', Courier, monospace;
         padding: 0.5rem 2%;
     }
     .producto-individual{
-        // img {
-        //     height: 125px;
-        //     width: 120px;
-        // }
         h3{
             font-size: 1.5rem;
         }
         button{
             font-size: 1rem;
         }
+    }
+    .btn{
+        font-size: 0.75rem;
     }
 }

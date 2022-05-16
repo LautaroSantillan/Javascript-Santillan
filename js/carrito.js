@@ -44,7 +44,7 @@ const pintarCards = data => {
         templateCard.querySelector('h3').textContent = producto.title + " " + producto.vol
         templateCard.querySelector('.precio').textContent = producto.precio
         templateCard.querySelector('img').setAttribute("src", producto.img)
-        templateCard.querySelector('.btn-dark').dataset.id = producto.id
+        templateCard.querySelector('.btn-add').dataset.id = producto.id
         const clone = templateCard.cloneNode(true)
         fragment.appendChild(clone)
     })
@@ -53,7 +53,7 @@ const pintarCards = data => {
 
 // AGREGAR AL CARRITO
 const addCarrito = e => {
-    if(e.target.classList.contains('btn-dark')){
+    if(e.target.classList.contains('btn-add')){
         setCarrito(e.target.parentElement)
     }
     e.stopPropagation()
@@ -61,7 +61,7 @@ const addCarrito = e => {
 
 const setCarrito = objeto => {
     const producto = {
-        id: objeto.querySelector('.btn-dark').dataset.id,
+        id: objeto.querySelector('.btn-add').dataset.id,
         title: objeto.querySelector('h3').textContent,
         precio: objeto.querySelector('.precio').textContent,
         cantidad: 1 
@@ -138,7 +138,6 @@ const pintarFooter = () => {
         console.log("Se realizo la compra y se vacio el carrito")
     })
 }
-
 // SUMAR/RESTAR PRODUCTOS - BOTON
 const btnSumar = e => {
     if(e.target.classList.contains('btn-info')){
